@@ -53,6 +53,14 @@ while not solved and count < iterations:
     #    plt.axis([0,10,0,1])
     #    plt.show()
 
+linex = []
+liney = []
+for x in np.linspace(0,10):
+    linex.append(x)
+    if theta[1] != 0:
+        y = (-theta_0 - theta[0]*x)/theta[1]
+        liney.append(y)
+
 plt.scatter(t_points.T[0],t_points.T[1],marker='o',c=t_labels)
 plt.plot(linex,liney,'k-')
 plt.axis([0,10,0,1])
